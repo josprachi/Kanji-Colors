@@ -1,0 +1,149 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Menu/blue_button00.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Menu/blue_button01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Art/Colors/aka.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Art/Colors/shiro.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Art/Colors/kiiro.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Art/Colors/ao.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Art/Colors/chairo.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Art/Colors/midori.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Art/Colors/murasaki.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Art/Colors/kuro.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Art/Colors/kin-iro.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Art/Colors/momoiro.png" type="Texture" id=13]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="SpinButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = 20.0
+margin_right = 95.0
+margin_bottom = 69.0
+texture_normal = ExtResource( 1 )
+texture_focused = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_right = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonArray" type="GridContainer" parent="ButtonRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -232.5
+margin_top = -129.0
+margin_right = 232.5
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_Kiniro" type="Button" parent="ButtonRect/ButtonArray"]
+margin_right = 109.0
+margin_bottom = 55.0
+icon = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_momoiro" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 113.0
+margin_right = 222.0
+margin_bottom = 55.0
+icon = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_Aka" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 226.0
+margin_right = 288.0
+margin_bottom = 55.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_Aao" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 292.0
+margin_right = 352.0
+margin_bottom = 55.0
+icon = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_Chairo" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 356.0
+margin_right = 465.0
+margin_bottom = 55.0
+icon = ExtResource( 8 )
+
+[node name="Btn_Kiiro" type="Button" parent="ButtonRect/ButtonArray"]
+margin_top = 59.0
+margin_right = 109.0
+margin_bottom = 129.0
+icon = ExtResource( 6 )
+
+[node name="Btn_Murasaki" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 113.0
+margin_top = 59.0
+margin_right = 222.0
+margin_bottom = 129.0
+icon = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_Midori" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 226.0
+margin_top = 59.0
+margin_right = 288.0
+margin_bottom = 129.0
+icon = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_Kuro" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 292.0
+margin_top = 59.0
+margin_right = 352.0
+margin_bottom = 129.0
+icon = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Btn_shiro" type="Button" parent="ButtonRect/ButtonArray"]
+margin_left = 356.0
+margin_top = 59.0
+margin_right = 465.0
+margin_bottom = 129.0
+icon = ExtResource( 5 )
+
+[node name="CoverSprite" type="Sprite" parent="."]
+position = Vector2( 321.337, 393.714 )
+scale = Vector2( 3.353, 3 )
+texture = ExtResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="pressed" from="SpinButton" to="." method="_on_SpinButton_pressed"]
