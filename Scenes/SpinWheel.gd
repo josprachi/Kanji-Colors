@@ -10,9 +10,6 @@ var rng
 func _ready():
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
-	#$Tween.interpolate_method(self, "set_rotation_degrees", 0, 360, 10)
-	#$Tween.start()
-	#pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,6 +31,6 @@ func _on_Timer_timeout():
 		finalRoation+=self.rotation_degrees
 	
 	#print(my_random_number)
-	$Tween.interpolate_method(self, "set_rotation_degrees", self.rotation_degrees, finalRoation, 10)
+	$Tween.interpolate_method(self, "set_rotation_degrees", self.rotation_degrees, finalRoation, 4,Tween.TRANS_LINEAR,Tween.EASE_OUT)
 	print(self.rotation_degrees)
 	$Tween.start()
