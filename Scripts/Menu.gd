@@ -34,8 +34,14 @@ func _on_SpinButton_button_up():
 	print("button clicked")
 	
 
-
+func set_SpinButton_Text():
+	var tex=preload("res://Assets/Menu/green_button01.png")
+	$SpinButton.texture_normal=tex
+	
 func _on_SpinButton_pressed():
+	print(get_parent().get_node("SpinWheel").state)#get_child(0).state)
+	if get_parent().get_node("SpinWheel").state =="idle":
+		print("idle")
 	posArray.shuffle()
 	var index=0
 	print(posArray)
@@ -43,6 +49,6 @@ func _on_SpinButton_pressed():
 		$ButtonRect/ButtonArray.move_child($ButtonRect/ButtonArray.get_children()[index],posArray[index])
 		index+=1
 	#$ButtonRect/ButtonArray.move_child($ButtonRect/ButtonArray.get_children()[0],2)
-	print($ButtonRect/ButtonArray.get_child(0))
+	#print($ButtonRect/ButtonArray.get_child(0))
 	show_Buttons()
-	print("spin button pressed")
+	#print("spin button pressed")
