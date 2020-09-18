@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Art/wheelPetal.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 0.565078
+radius = 5.06156
 
 [node name="Petal" type="StaticBody2D"]
 __meta__ = {
@@ -17,9 +17,9 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -25, -75 )
+position = Vector2( -25.4745, -79.4388 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="CollisionShape2D"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 1 )
