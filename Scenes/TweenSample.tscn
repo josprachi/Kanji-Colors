@@ -1,5 +1,0 @@
-[gd_scene format=2]
-
-[node name="TweenSample" type="CanvasLayer"]
-
-[node name="Tween" type="Tween" parent="."]

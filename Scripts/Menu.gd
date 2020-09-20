@@ -39,9 +39,9 @@ func set_SpinButton_Text():
 	$SpinButton.texture_normal=tex
 	
 func _on_SpinButton_pressed():
-	print(get_parent().get_node("SpinWheel").state)#get_child(0).state)
-	if get_parent().get_node("SpinWheel").state =="idle":
-		print("idle")
+	#print(get_parent().get_node("SpinWheel").state)#get_child(0).state)
+	#if get_parent().get_node("SpinWheel").state =="idle":
+		#print("idle")
 	posArray.shuffle()
 	var index=0
 	print(posArray)

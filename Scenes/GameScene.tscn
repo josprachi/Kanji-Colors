@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://WheelOfFortune.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/WheelOfFortune.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Art/Colors/iro.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/WheelPin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/WheelOfFortune.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="GameScene" type="Node2D"]
 
 [node name="Menu" parent="." instance=ExtResource( 3 )]
-script = null
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -17,6 +18,8 @@ autostart = true
 
 [node name="ColorWheel" parent="." instance=ExtResource( 1 )]
 position = Vector2( 320, 160 )
+angular_velocity = 100.0
+script = ExtResource( 5 )
 
 [node name="WheelPin" parent="." instance=ExtResource( 4 )]
 position = Vector2( 320, 60.058 )
@@ -38,3 +41,8 @@ node_b = NodePath("../../WheelPin")
 position = Vector2( 320, 50 )
 node_a = NodePath("../StaticBody2D")
 node_b = NodePath("../../WheelPin")
+
+[node name="Color_Name" type="Sprite" parent="."]
+visible = false
+position = Vector2( 500, 50 )
+texture = ExtResource( 2 )
