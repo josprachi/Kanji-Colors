@@ -19,6 +19,7 @@ texture = ExtResource( 1 )
 
 [node name="Petal" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.972549, 0.0470588, 0.0470588, 1 )
+PetalColorName = "aka"
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -27,6 +28,7 @@ node_b = NodePath("../Petal")
 [node name="Petal2" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.94902, 0.870588, 0.0156863, 1 )
 rotation = 0.628319
+PetalColorName = "kiiro"
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -35,6 +37,7 @@ node_b = NodePath("../Petal2")
 [node name="Petal3" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.0117647, 0.113725, 0.945098, 1 )
 rotation = 1.25664
+PetalColorName = "ao"
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -43,6 +46,7 @@ node_b = NodePath("../Petal3")
 [node name="Petal4" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.223529, 0.85098, 0.0235294, 1 )
 rotation = 1.88496
+PetalColorName = "midori"
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -51,6 +55,7 @@ node_b = NodePath("../Petal4")
 [node name="Petal5" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.937255, 0.0352941, 0.964706, 1 )
 rotation = 2.51327
+PetalColorName = "murasaki"
 
 [node name="PinJoint2D5" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -59,6 +64,7 @@ node_b = NodePath("../Petal5")
 [node name="Petal6" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.501961, 0.270588, 0.14902, 1 )
 rotation = 3.14159
+PetalColorName = "chairo"
 
 [node name="PinJoint2D6" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -67,6 +73,7 @@ node_b = NodePath("../Petal6")
 [node name="Petal7" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.0117647, 0, 0, 1 )
 rotation = 3.76991
+PetalColorName = "kuro"
 
 [node name="PinJoint2D7" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -74,6 +81,7 @@ node_b = NodePath("../Petal7")
 
 [node name="Petal8" parent="." instance=ExtResource( 2 )]
 rotation = 4.39823
+PetalColorName = "shiro"
 
 [node name="PinJoint2D8" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -82,6 +90,7 @@ node_b = NodePath("../Petal8")
 [node name="Petal9" parent="." instance=ExtResource( 2 )]
 modulate = Color( 1, 0.45098, 0.498039, 1 )
 rotation = 5.02655
+PetalColorName = "momoiro"
 
 [node name="PinJoint2D9" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
@@ -90,6 +99,7 @@ node_b = NodePath("../Petal9")
 [node name="Petal10" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.972549, 0.603922, 0.0313726, 1 )
 rotation = 5.65487
+PetalColorName = "kin_iro"
 
 [node name="PinJoint2D10" type="PinJoint2D" parent="."]
 node_a = NodePath("..")
