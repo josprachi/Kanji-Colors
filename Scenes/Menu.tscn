@@ -56,7 +56,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_Kiniro" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Kiniro" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_right = 109.0
 margin_bottom = 55.0
 icon = ExtResource( 12 )
@@ -64,7 +66,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_momoiro" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_momoiro" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 113.0
 margin_right = 222.0
 margin_bottom = 55.0
@@ -73,7 +77,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_Aka" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Aka" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 226.0
 margin_right = 288.0
 margin_bottom = 55.0
@@ -82,7 +88,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_Aao" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Aao" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 292.0
 margin_right = 352.0
 margin_bottom = 55.0
@@ -91,19 +99,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_Chairo" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Chairo" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 356.0
 margin_right = 465.0
 margin_bottom = 55.0
 icon = ExtResource( 8 )
 
-[node name="Btn_Kiiro" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Kiiro" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_top = 59.0
 margin_right = 109.0
 margin_bottom = 129.0
 icon = ExtResource( 6 )
 
-[node name="Btn_Murasaki" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Murasaki" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 113.0
 margin_top = 59.0
 margin_right = 222.0
@@ -113,7 +127,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_Midori" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Midori" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 226.0
 margin_top = 59.0
 margin_right = 288.0
@@ -123,7 +139,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_Kuro" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Kuro" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 292.0
 margin_top = 59.0
 margin_right = 352.0
@@ -133,7 +151,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Btn_shiro" type="Button" parent="ButtonRect/ButtonArray"]
+[node name="Btn_Shiro" type="Button" parent="ButtonRect/ButtonArray" groups=[
+"ColorButtons",
+]]
 margin_left = 356.0
 margin_top = 59.0
 margin_right = 465.0

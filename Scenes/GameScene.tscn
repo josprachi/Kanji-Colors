@@ -13,7 +13,7 @@
 [node name="Menu" parent="." instance=ExtResource( 3 )]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [node name="ColorWheel" parent="." instance=ExtResource( 1 )]
@@ -27,6 +27,7 @@ script = ExtResource( 5 )
 position = Vector2( 320, 63.058 )
 contacts_reported = 10
 contact_monitor = true
+script = null
 
 [node name="PinAndJoints" type="Node2D" parent="."]
 
@@ -46,7 +47,7 @@ position = Vector2( 320, 50 )
 node_a = NodePath("../StaticBody2D")
 node_b = NodePath("../../WheelPin")
 
-[node name="Color_Name" type="Sprite" parent="."]
+[node name="Color_NameSprite" type="Sprite" parent="."]
 visible = false
 position = Vector2( 500, 50 )
 texture = ExtResource( 2 )
