@@ -2,8 +2,7 @@ extends RigidBody2D
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var rng
 var petalColor 
 
@@ -18,13 +17,16 @@ func _on_Timer_timeout():
 		self.angular_velocity=rng.randf_range(40.0, 150.0) #pass # Replace with function body.
 
 func checkButtonName(button):
-	print("here1")
+	#match the color of petal with name of button color and display sprite on the button in the corner and display color too
+	get_parent().get_node("Color_NameSprite").texture = button.icon
+	get_parent().get_node("Color_NameSprite").visible=true
 	print(button.name)
-	print("here2")
+	
 
 func _on_WheelPin_body_entered(body):
 	#print(self.angular_velocity)
 	if self.angular_velocity<1 :		
 		if(body.get_name().begins_with ("Petal")):
 			print(body.PetalColorName)
-			self.angular_velocity=0.0
+			petalColor = body.PetalColorName
+			self.angular_velocity = 0.0
