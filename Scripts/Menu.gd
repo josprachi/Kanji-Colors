@@ -20,21 +20,14 @@ func _ready():
 func _which_button_pressed(button):
 	#call check button name method from color wheel class
 	get_parent().get_node("ColorWheel").checkButtonName(button)
-	disableColorButtons(true)	
+	disableColorButtons(true)
+	$ButtonRect/ButtonArray.visible=false
 	
 	
 func show_Buttons():
 	$Tween.interpolate_property($CoverSprite, "position",coverPos, coverFinalPos, 0.5,Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$Tween.start()
-
-func _on_SpinButton_mouse_exited():
-	print("button exit")
-
-
-func _on_SpinButton_button_up():
-	print("button clicked")
 	
-
 func set_SpinButton_Text():
 	var tex=preload("res://Assets/Menu/green_button01.png")
 	$SpinButton.texture_normal=tex
@@ -46,6 +39,8 @@ func disableColorButtons(val):
 func _on_SpinButton_pressed():	
 	posArray.shuffle()
 	var index=0
+	get_parent().get_node("ColorWheel").canSpin=true
+	$ButtonRect/ButtonArray.visible=true
 	disableColorButtons(false)
 	while index<$ButtonRect/ButtonArray.get_child_count():
 		$ButtonRect/ButtonArray.move_child($ButtonRect/ButtonArray.get_children()[index],posArray[index])		

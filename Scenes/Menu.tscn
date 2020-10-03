@@ -161,6 +161,7 @@ margin_bottom = 129.0
 icon = ExtResource( 5 )
 
 [node name="CoverSprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 321.337, 393.714 )
 scale = Vector2( 3.353, 3 )
 texture = ExtResource( 1 )

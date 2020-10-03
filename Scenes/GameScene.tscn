@@ -1,14 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/WheelOfFortune.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Art/Colors/iro.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/WheelPin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/WheelOfFortune.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Menu/EmptySprite.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Menu/checkmark.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Menu/green_cross.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/GameScene.gd" type="Script" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="GameScene" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Menu" parent="." instance=ExtResource( 3 )]
 
@@ -48,8 +53,22 @@ node_a = NodePath("../StaticBody2D")
 node_b = NodePath("../../WheelPin")
 
 [node name="Color_NameSprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 500, 50 )
+position = Vector2( 569, 50 )
 texture = ExtResource( 2 )
+
+[node name="Color_Sprite" type="Sprite" parent="."]
+position = Vector2( 500, 50 )
+texture = ExtResource( 6 )
+
+[node name="CheckMark" type="Sprite" parent="."]
+position = Vector2( 502.5, 104 )
+scale = Vector2( 1.90476, 1.9 )
+texture = ExtResource( 7 )
+
+[node name="WrongMark" type="Sprite" parent="."]
+modulate = Color( 0.984314, 0.027451, 0.027451, 1 )
+position = Vector2( 570.5, 103 )
+scale = Vector2( 1.90476, 1.9 )
+texture = ExtResource( 8 )
 [connection signal="timeout" from="Timer" to="ColorWheel" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="WheelPin" to="ColorWheel" method="_on_WheelPin_body_entered"]
