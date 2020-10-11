@@ -99,7 +99,7 @@ node_b = NodePath("../Petal9")
 [node name="Petal10" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.972549, 0.603922, 0.0313726, 1 )
 rotation = 5.65487
-PetalColorName = "kin_iro"
+PetalColorName = "kiniro"
 
 [node name="PinJoint2D10" type="PinJoint2D" parent="."]
 node_a = NodePath("..")

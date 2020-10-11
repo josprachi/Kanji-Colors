@@ -15,19 +15,27 @@ func _ready():
 func _physics_process(delta):
 	if (canSpin == true ) :
 		self.angular_velocity=rng.randf_range(40.0, 150.0)
+		petalColor = ""
 		canSpin=false
 
-#func _on_Timer_timeout():
-	#if (canSpin == true and self.angular_velocity==0.0) :
-		#self.angular_velocity=rng.randf_range(40.0, 150.0) #pass # Replace with function body.
+
 
 func checkButtonName(button):
 	#match the color of petal with name of button color and display sprite on the button in the corner and display color too
 	get_parent().get_node("Color_NameSprite").texture = button.icon
 	get_parent().get_node("Color_NameSprite").visible=true
+	var result = ((button.name.to_lower()).ends_with(petalColor))
+	showCheck(result)
+	canSpin = true		
 	print(button.name)
 	
-
+func showCheck(result):
+	if(result == true):
+		get_parent().get_node("CheckMark").visible = true
+		get_parent().get_node("WrongMark").visible = false
+	else:
+		get_parent().get_node("CheckMark").visible = false
+		get_parent().get_node("WrongMark").visible = true	
 func _on_WheelPin_body_entered(body):	
 	if self.angular_velocity<1 :		
 		if(body.get_name().begins_with ("Petal")):
@@ -36,3 +44,8 @@ func _on_WheelPin_body_entered(body):
 			
 			get_parent().get_node("Color_Sprite").modulate = body.modulate
 			self.angular_velocity = 0.0
+
+
+func _on_Timer_timeout():
+	if(canSpin):
+		get_parent().get_node("Menu")._on_SpinButton_pressed()

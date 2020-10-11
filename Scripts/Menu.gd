@@ -11,6 +11,7 @@ var posArray:= [0,1,2,3,4,5,6,7,8,9]
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	coverPos=$CoverSprite.position
+	$WindowDialog.popup()
 	coverFinalPos=Vector2($CoverSprite.position.x,coverPos.y+($CoverSprite.get_rect().size.y*4))#texture.get_size().y)
 	var index=0
 	for button in get_tree().get_nodes_in_group("ColorButtons"):
@@ -46,4 +47,5 @@ func _on_SpinButton_pressed():
 		$ButtonRect/ButtonArray.move_child($ButtonRect/ButtonArray.get_children()[index],posArray[index])		
 		index+=1
 	show_Buttons()
+	$SpinButton.disabled = true
 	
