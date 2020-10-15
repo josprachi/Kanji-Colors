@@ -19,13 +19,13 @@ func _physics_process(delta):
 		canSpin=false
 
 
-
 func checkButtonName(button):
 	#match the color of petal with name of button color and display sprite on the button in the corner and display color too
 	get_parent().get_node("Color_NameSprite").texture = button.icon
 	get_parent().get_node("Color_NameSprite").visible=true
 	var result = ((button.name.to_lower()).ends_with(petalColor))
 	showCheck(result)
+	get_parent().get_node("Timer").start(2.0)
 	canSpin = true		
 	print(button.name)
 	
@@ -36,6 +36,7 @@ func showCheck(result):
 	else:
 		get_parent().get_node("CheckMark").visible = false
 		get_parent().get_node("WrongMark").visible = true	
+		
 func _on_WheelPin_body_entered(body):	
 	if self.angular_velocity<1 :		
 		if(body.get_name().begins_with ("Petal")):

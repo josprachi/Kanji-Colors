@@ -17,7 +17,6 @@
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
-autostart = true
 
 [node name="ColorWheel" parent="." instance=ExtResource( 1 )]
 position = Vector2( 320, 160 )
@@ -68,5 +67,4 @@ modulate = Color( 0.984314, 0.027451, 0.027451, 1 )
 position = Vector2( 570.5, 103 )
 scale = Vector2( 1.90476, 1.9 )
 texture = ExtResource( 8 )
-[connection signal="timeout" from="Timer" to="ColorWheel" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="WheelPin" to="ColorWheel" method="_on_WheelPin_body_entered"]
